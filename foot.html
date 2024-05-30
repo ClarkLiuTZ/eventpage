@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球場版型</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F0F0F0;
+    font-family: Arial, sans-serif;
+}
+
+.soccer-field {
+    position: relative;
+    width: 90%;
+    max-width: 1440px;
+    padding-top: 83.33%; /* 1200/1440 to maintain aspect ratio */
+    background-color: #228B22;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
+
+.corner {
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    background-color: white;
+    border:#228B22 1px solid;
+    clip-path: circle(50%);
+}
+
+.corner-top-left {
+    top: 0%;
+    left: 0%;
+    clip-path: circle(50% at 0 0);
+}
+
+.corner-top-right {
+    top: 0%;
+    right: 0%;
+    clip-path: circle(50% at 100% 0);
+}
+
+.corner-bottom-left {
+    bottom: 0%;
+    left: 0%;
+    clip-path: circle(50% at 0 100%);
+}
+
+.corner-bottom-right {
+    bottom: 0%;
+    right: 0%;
+    clip-path: circle(50% at 100% 100%);
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.center-text p {
+    margin: 0.5rem 0;
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+    .soccer-field {
+        width: 95%;
+        padding-top: calc(95% * 5/6); /* Maintain the 5:6 aspect ratio */
+    }
+
+    .corner {
+        width: 6%;
+        height: 6%;
+    }
+
+    .center-text {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="soccer-field">
+        <div class="penalty-area penalty-area-left"></div>
+        <div class="penalty-area penalty-area-right"></div>
+        <div class="goal-area goal-area-left"></div>
+        <div class="goal-area goal-area-right"></div>
+        <div class="corner corner-top-left"></div>
+        <div class="corner corner-top-right"></div>
+        <div class="corner corner-bottom-left"></div>
+        <div class="corner corner-bottom-right"></div>
+        <div class="center-text">
+            <p>台北可樂陪你瘋世足</p>
+            <p>滿$199登入發票</p>
+            <p>帶你去世足</p>
+        </div>
+    </div>
+</body>
+</html>
