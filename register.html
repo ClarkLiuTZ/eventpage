@@ -7,91 +7,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- 導入sheet.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 
 <body>
     <header>
-        <section>
-            <div class="eventbanner">
-                <img src="./photos/角球左上.png" alt="" class="corner1">
-                <img src="./photos/角球左下.png" alt="" class="corner2">
-                <img src="./photos/角球右上.png" alt="" class="corner3">
-                <img src="./photos/角球右下.png" alt="" class="corner4">
-                <div class="bannerText">
-                    <div class="ribbonText">
-                        <img src="./photos/彩帶1-04.png" alt="" class="ribbon">
-                        <label for="" class="h1">台北可樂陪你瘋世足</label>
-                        <img src="./photos/彩帶2-04.png" alt="" class="ribbon">
+        <div class="eventbanner">
+            <div class="corner corner1"></div>
+            <div class="corner corner2"></div>
+            <div class="corner corner3"></div>
+            <div class="corner corner4"></div>
+            <div class="square"></div>
+            <div class="background"></div>
+            <div class="bannerText">
+                <div class="ribbonText">
+                    <img src="./photos/ribbonleft.png" alt="" class="ribbon">
+                    <label class="h1">台北可樂陪你瘋世足</label>
+                    <img src="./photos/ribbonright.png" alt="" class="ribbon">
+                </div>
+                <label class="h2">滿$199登入購買發票</label>
+                <label class="h1">帶你去墨西哥世足現場</label>
+                <div class="goods4">
+                    <div class="goods3">
+                        <img src="./photos/cola.png" class="goods1">
+                        <label class="h3">Taste the Joy</label>
                     </div>
-                    <label for="" class="h2">滿$199登入購買發票</label>
-                    <label for="" class="h1">帶你去墨西哥世足現場</label>
-                    <div class="goods4">
-                        <div class="goods3">
-                            <img src="./photos/cola.png" class="goods1">
-                            <label for="" class="h3">Taste the Joy</label>
-                        </div>
-                        <div class="hr"></div>
-                        <div class="goods3">
-                            <img src="./photos/champion.png" class="goods2">
-                            <label for="" class="h3">2026墨西哥市</label>
-                        </div>
+                    <div class="hr"></div>
+                    <div class="goods3">
+                        <img src="./photos/champion.png" class="goods2">
+                        <label class="h3">2026墨西哥市</label>
                     </div>
                 </div>
-                <img src="./photos/pexels-rfstudio-3886235-01-01.png" alt="" class="football">
             </div>
-        </section>
+            <div class="arrow"></div>
+            <img src="./photos/pexels-rfstudio-3886235-01-01.png" alt="" class="football">
+        </div>
+    </header>
         <ul class="top">
-            <li><a href="#" class="navbar">活動首頁</a></li>
-            <li><a href="#" class="navbar">活動辦法</a></li>
+            <li><a href="./index.html" class="navbar">活動首頁</a></li>
+            <li><a href="#" class="navbar">活動內容</a></li>
             <li><a href="#" class="navbar">活動須知</a></li>
             <li><a href="#" class="navbar">聯絡我們</a></li>
-            <li><a href="#" class="navbar">購買通路</a></li>
+            <li><a href="./channel.html" class="navbar">購買通路</a></li>
+            <li><a href="./register.html" class="navbar">上傳發票</a></li>
             <li><a href="#" class="navbar">中獎名單</a></li>
-            <li><a href="#" class="navbar">聯絡我們</a></li>
         </ul>
-    </header>
     <main>
         <div class="box">
-            <ul class="textBox">
+            <ul class="textBox registerbutton">
                 <li>
                     <div>
-                        <p class="">發票號碼</p>
+                        <label class="">發票號碼</label>
                         <div class="input1">
-                            <input type="text" name="" id="input_style1" placeholder="AA">
-                            <input type="text" name="" id="input_style2" placeholder="12345678">
+                            <input type="text" name="invoicePrefix" class="input input_style1" placeholder="AA">
+                            <div class="dash"></div>
+                            <input type="text" name="invoiceNumber" class="input input_style2" placeholder="12345678" >
                         </div>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <p class="">消費日期</p>
-                        <input type="date" id="input_style3">
+                        <label class="">消費日期</label>
+                        <input type="date" name="purchaseDate" class="input input_style3">
                     </div>
                 </li>
                 <li>
-                    <div>
-                        <p class="">隨機碼</p>
-                        <p>隨機碼說明</p>
-                        <input type="text" name="" id="input_style3" placeholder="512">
+                    <div class="randomCode">
+                        <label class="">隨機碼</label>
+                        <label>隨機碼說明</label>
+                        <input type="text" name="randomCode" class="input input_style3" placeholder="512">
                     </div>
                 </li>
                 <li>
                     <div>
                         <p class="">消費者</p>
-                        <input type="text" name="" id="input_style3" placeholder="王小明">
+                        <input type="text" name="customerName" class="input input_style3" placeholder="王小明">
                     </div>
                 </li>
                 <li>
                     <div>
-                        <p class="">連絡電話</p>
-                        <input type="text" name="" id="input_style3" placeholder="0912345678">
+                        <label class="">連絡電話</label>
+                        <input type="text" name="contactNumber" class="input input_style3" placeholder="0912345678">
                     </div>
                 </li>
                 <li>
                     <div>
-                        <p class="">聯絡地址</p>
-                        <div class="input1" id="input_style1">
-                            <select>
+                        <label class="">聯絡地址</label>
+                        <div class="input1">
+                            <select class="input input_style1" name="city">
                                 <option value="">台北市</option>
                                 <option value="">新北市</option>
                                 <option value="">基隆市</option>
@@ -114,24 +118,53 @@
                                 <option value="">澎湖縣</option>
                                 <option value="">金門縣</option>
                                 <option value="">連江縣</option>
-                                </ㄋ>
-                                <input type="text" name="" id="input_style2" placeholder="中正區濟南路一段321號">
+                            </select>
+                            <div class="dash"></div>
+                            <input type="text" name="address" class="input input_style2" placeholder="中正區濟南路一段321號">
                         </div>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <p class="">連絡信箱</p>
-                        <input type="text" name="" id="input_style3" placeholder="123@yahoo.com.tw">
+                        <label class="">連絡信箱</label>
+                        <input type="text" name="email" class="input input_style3" placeholder="123@yahoo.com.tw">
                     </div>
                 </li>
-                <li><input type="button" value="上傳發票" class="register"></li>
+                <li class="registerButtonInner"><input type="button" value="上傳發票" class="register" onclick="uploadData()"></li>
             </ul>
         </div>
+        <input type="button" value="" class="download" onclick="downloadData()">
     </main>
     <footer>
         <div class="footerCola">台北可樂®since 2024</div>
     </footer>
+    <script>
+        let dataArray=[];
+        function uploadData() {
+            const data = {
+                invoicePrefix: document.querySelector('input[name="invoicePrefix"]').value,
+                invoiceNumber: document.querySelector('input[name="invoiceNumber"]').value,
+                purchaseDate: document.querySelector('input[name="purchaseDate"]').value,
+                randomCode: document.querySelector('input[name="randomCode"]').value,
+                customerName: document.querySelector('input[name="customerName"]').value,
+                contactNumber: document.querySelector('input[name="contactNumber"]').value,
+                city: document.querySelector('select[name="city"]').value,
+                address: document.querySelector('input[name="address"]').value,
+                email: document.querySelector('input[name="email"]').value,
+            };
+            dataArray.push(data);
+            console.log(dataArray);
+        }
+        function downloadData() {
+            // 使用 SheetJS 將資料轉換為工作簿
+            const worksheet = XLSX.utils.json_to_sheet(dataArray);
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, "Sheet1");
+
+            // 產生 Excel 文件並觸發下載
+            XLSX.writeFile(workbook, '發票資料.xlsx');
+        }
+    </script>
 </body>
 
 </html>
