@@ -224,6 +224,7 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
+    z-index: 51;
 }
 
 .h1 {
@@ -419,6 +420,21 @@ header {
 }
 
 /* 內容區 */
+.rail {
+    position: fixed;
+    top: 0;
+    width: 8px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh)* 100);
+    background-color: var(--backgroundRed);
+    z-index: 50;
+}
+.rail--right{
+    right: 0;
+}
+.rail--left{
+    left: 0;
+}
 .pageBanner {
     width: 7.125rem;
     height: 3.75rem;
@@ -459,7 +475,7 @@ header {
 .prizeList {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .prize {
@@ -469,18 +485,21 @@ header {
     width: 30%;
 }
 
-.prize img {
-    max-width: 150px;
-    max-height: 150px;
-    object-fit: cover;
-}
-
 .col {
     position: relative;
     clip-path: circle(50%);
     object-fit: cover;
 }
 
+.prize img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.prize label{
+    color: var(--bannerWhite);
+}
 .chaanel {
     display: flex;
     flex-direction: column;
@@ -539,7 +558,7 @@ header {
 }
 
 .register:hover {
-    color: red;
+    color: gold;
     transition: 0.8s ease-in-out;
 }
 
@@ -724,6 +743,9 @@ header {
 
     .arrow {
         left: 38%;
+    }
+    .rail {
+        width: 6px;
     }
 }
 
