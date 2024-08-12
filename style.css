@@ -218,7 +218,7 @@ header {
 
 .eventbanner {
     max-width: 1440px;
-    min-height: 1024px;
+    max-height: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,7 +226,11 @@ header {
     overflow: hidden;
     z-index: 51;
 }
-
+.eventbanner video{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
 .h1 {
     font-size: 3.6875rem;
     font-weight: 700;
@@ -312,6 +316,7 @@ header {
     background-color: var(--backgroundRed);
     position: absolute;
     z-index: 1;
+    opacity: 90%;
 }
 
 .corner {
