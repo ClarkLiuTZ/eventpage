@@ -8,6 +8,7 @@
 - RWD版面設計
 - 方便行銷人員將使用者上傳到console.log的資料打包下載
 - 互動元素
+- JS判斷提交活動資料的正確性
 
 ## Preview
 https://clarkliutz.github.io/eventpage/
